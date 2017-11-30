@@ -19,4 +19,11 @@ class Vector(object):
 
 	def __eq__(self, v):
 		return self.coordinates == v.coordinates
-		
+
+	def plus(self, v):
+		# A function to add two vectors
+		new_coordinates = []
+		n = len(self.coordinates)
+		for i in range(n):
+			new_coordinates.append(self.coordinates[i] + v.coordinates[i])
+		return Vector(new_coordinates)
