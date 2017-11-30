@@ -27,3 +27,11 @@ class Vector(object):
 		for i in range(n):
 			new_coordinates.append(self.coordinates[i] + v.coordinates[i])
 		return Vector(new_coordinates)
+
+	def minus(self, v):
+		# A function to subract two vectors
+		new_coordinates = []
+		n = len(self.coordinates)
+		for i in range(n):
+			new_coordinates.append(self.coordinates[i] - v.coordinates[i])
+		return Vector(new_coordinates)
