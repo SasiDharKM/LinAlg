@@ -35,3 +35,10 @@ class Vector(object):
 		for i in range(n):
 			new_coordinates.append(self.coordinates[i] - v.coordinates[i])
 		return Vector(new_coordinates)
+
+	def scalar_multiply(self, c):
+		new_coordinates = []
+		n = len(coordinates)
+		for i in range(n):
+			new_coordinates.append(self.coordinates[i]*c)
+		return Vector(new_coordinates)
